@@ -3,11 +3,8 @@ django-crispy-forms==1.8.1
 gunicorn==20.0.4
 httplib2==0.11.3
 Pillow==6.1.0
-python-apt==1.9.0+ubuntu1.3
 python-dateutil==2.7.3
 python-debian==0.1.36
-pytz==2019.2
-pyxdg==0.25
 PyYAML==5.1.2
 reportlab==3.5.23
 requests==2.21.0
