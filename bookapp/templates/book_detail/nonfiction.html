@@ -1,0 +1,31 @@
+{% extends 'books/base.html' %}     
+                  
+                    
+{% block content %}
+
+<div class="post container">
+<a href="{% url 'Non_bookadd' %}" class="btn btn-info">Add</a>
+</div><br>
+                   {% for p in post %}       
+                  <div class="container">
+                        <h2><a href="{% url 'non' pk=p.pk %}">{{ p.bookname }}</a>
+                        <a style="color: white;" href="/delete?id={{p.id}}" 
+                              onclick="return deleteItem()">
+                              <button class="btn btn-info">Delete</button>
+                              </a></h2>
+                        <p>{{ p.author }}</p>
+                        <p> {{ p.published_date }}</p>
+                  </div>
+                  {% endfor %}
+
+<script>
+    function deleteItem(){
+
+        if(confirm('Are You Sure To Delete item?'))
+        return true;
+        else return false;
+    }
+</script>
+
+
+    {% endblock %}

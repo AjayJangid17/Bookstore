@@ -1,0 +1,12 @@
+{% extends 'books/base.html' %}
+                  
+{% load static %}                  
+
+{% block content %}
+
+<div class="container">
+    <a href="{% url 'nontext_edit' pk=post.pk %}" class="btn btn-info">Edit</a>   
+<p>{{ post.text|escape|linebreaks }}</p>
+</div>
+
+{% endblock %}

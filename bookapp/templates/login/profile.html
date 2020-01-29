@@ -1,0 +1,16 @@
+{% extends 'books/base.html' %} 
+
+
+{% block content  %}
+
+    <div class='section content'>
+        <div class="media">
+            <img style="max-width: 100px;" class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+            <div class="media-body">
+                <h2 class="account-heading">Name: {{ user.username }}</h2>
+                <p class="text-secondary">Email: {{ user.email }}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock  %}

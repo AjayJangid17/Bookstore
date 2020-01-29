@@ -1,0 +1,18 @@
+{% extends 'books/base.html' %}
+
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+                  
+{% load static %}                  
+
+{% block content %}
+
+
+<div class="container">
+    <a href="{% url 'pdtext_edit' pk=post.pk %}" class="btn btn-info">Edit</a> {% csrf_token %}  
+     <p style="text-align: justify; 
+     font-family: "Trebuchet MS", Helvetica, sans-serif; display: none;">
+     {{ post.text|escape|linebreaks }}</p>
+  
+</div>
+
+{% endblock %}

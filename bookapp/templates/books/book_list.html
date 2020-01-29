@@ -1,0 +1,153 @@
+{% extends 'books/base.html' %}     
+                  
+                  
+{% block content %}
+
+<!-- <div class="container"> -->
+  <h3>Book Category</h3><br>
+  <div class="row">
+    <div class="col-md-6">
+<div id="accordion">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Personal Development<span>({{ count1 }})</span>
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        To Explore all new updated Books<br><a href="{% url 'pd' %}">Click here..</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Non-Fiction<span>({{ count2 }})</span>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        To Explore all new updated Books<br><a href="{% url 'nonfic' %}">Click here..</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Mysterious<span>({{ count3 }})</span>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        To Explore all new updated Books<br><a href="{% url 'mystery' %}">Click here..</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+          Romance<span>({{ count4 }})</span>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        To Explore all new updated Books<br><a href="{% url 'romance' %}">Click here..</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+          Biography<span>({{ count5 }})</span>
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        To Explore all new updated Books<br><a href="{% url 'biography' %}">Click here..</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- </div> -->
+
+
+{% endblock %}
+
+
+
+<!-- with images container -->
+
+<!-- <center> 
+        <div>
+            <h3><a href="#">Book Category</a></h3>
+        </div>
+    </center><br><br>
+                {% load static %}
+                <div class="container">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="thumbnail">
+                              <a href="{% url 'pd' %}" target="_blank">
+                                <img src="{% static 'images/self.jpg' %}" alt="PD Books" style="width: 50%;">
+                                <div class="caption">
+                                  <p>Personal development({{ count1 }})</p>
+                                </div>
+                                </a>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="thumbnail">
+                              <a href="{% url 'nonfic' %}" target="_blank">
+                                <img src="{% static 'images/nonfiction.jpg' %}" alt="image" style="width: 100%;">
+                                <div class="caption">
+                                  <p>Non-Fiction({{ count2 }})</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="thumbnail">
+                              <a href="{% url 'mystery' %}" target="_blank">
+                                <img src="{% static 'images/Mystery.jpg' %}" alt="image" style="width: 100%;">
+                                <div class="caption">
+                                  <p>Mystery({{ count3 }})</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                                <div class="thumbnail">
+                                  <a href="{% url 'romance' %}" target="_blank">
+                                    <img src="{% static 'images/romance.jpg' %}" alt="image" style="width: 100%;">
+                                    <div class="caption">
+                                      <p>Romance({{ count4 }})</p>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div><br>
+                                  <div class="col-md-4">
+                                        <div class="thumbnail">
+                                          <a href="{% url 'biography' %}" target="_blank">
+                                            <img src="{% static 'images/biography.jpg' %}" alt="image" style="width: 100%;">
+                                            <div class="caption">
+                                              <p>Biography({{ count5 }})</p>
+                                            </div>
+                                          </a>
+                                        </div>
+                                      </div>
+                        </div>
+                      </div> -->
